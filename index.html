@@ -1,0 +1,143 @@
+<html>
+
+    <head>
+        <title>Icon Template Square</title>
+        <style>
+            .row{
+                width: 720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:10px;
+            }
+        </style>
+    </head>
+
+    <body style="background-color: #2f8ca3;">
+        <div class="row">
+            <div class="image-container"><img id="fantasy" src="img/fantasy.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="history" src="img/history.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="mystery" src="img/magnify.png" height="200" width="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="horror" src="img/horror.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="romance" src="img/romance.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="sport" src="img/sport.png" height="200" width="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="comedy" src="img/comedy.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="action" src="img/action.png" height="200" width="200"/></div>
+            <div class="image-container"><img id="adventure" src="img/adventure.png" height="200" width="200"/></div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+
+        <script type="module">
+            const sound1 = new buzz.sound ("audio/icon arrow.wav")
+            const sound2 = new buzz.sound ("audio/icon doorhandle.wav")
+            const sound3 = new buzz.sound ("audio/icon flashlight.wav")
+            const sound4 = new buzz.sound ("audio/icon gluck.wav")
+            const sound5 = new buzz.sound ("audio/icon hanger.wav")
+            const sound6 = new buzz.sound ("audio/icon kettle.wav")
+            const sound7 = new buzz.sound ("audio/icon mouseclick.wav")
+            const sound8 = new buzz.sound ("audio/icon pencap.wav")
+            const sound9 = new buzz.sound ("audio/icon plate.wav")
+           
+    
+            // interaction for fantasy
+            const fantasy = document.getElementById ("fantasy")
+            fantasy.onpointerdown = () => {
+                audioCheck ()
+                cup.src = 'img/fantasy after.png' // change image
+                sound1.play ()
+            }
+            fantasy.onpointerup = () => fantasy.src='img/fantasy.png'
+    
+            // interaction for history
+            const history = document.getElementById ("history")
+            history.onpointerdown = () => {
+                audioCheck ()
+                cloud.src = 'img/history after.png' // change image
+                sound2.play ()
+            }
+            history.onpointerup = () => history.src='img/history.png'
+    
+              // interaction for magnify
+              const magnify = document.getElementById ("magnify")
+            magnify.onpointerdown = () => {
+                audioCheck ()
+                magnify.src = 'img/magnify after.png' // change image
+                sound3.play ()
+            }
+            planet.onpointerup = () => magnify.src='img/magnify.png'
+    
+            // interaction for horror
+            const horror = document.getElementById ("horror")
+            horror.onpointerdown = () => {
+                audioCheck ()
+                horror.src = `img/horror after.png`
+                sound4.play ()
+            }
+            horror.onpointerup = () => horror.src = `img/horror.png`
+    
+             // interaction for romance
+             const romance = document.getElementById ("romance")
+            romance.onpointerdown = () => {
+                audioCheck ()
+                romance.src = `img/romance after.png`
+                sound5.play ()
+            }
+            romance.onpointerup = () => romance.src = `img/romance.png`
+    
+              // interaction for sport
+              const sport = document.getElementById ("sport")
+            sport.onpointerdown = () => {
+                audioCheck ()
+                sport.src = `img/sport after.png`
+                sound6.play ()
+            }
+            sport.onpointerup = () => sport.src = `img/sport.png`
+    
+               // interaction for comedy
+               const comedy = document.getElementById ("comedy")
+            comedy.onpointerdown = () => {
+                audioCheck ()
+                comedy.src = `img/comedy after.png`
+                sound7.play ()
+            }
+            comedy.onpointerup = () => comedy.src = `img/comedy.png`
+    
+                  // interaction for action
+                  const action = document.getElementById ("action")
+            action.onpointerdown = () => {
+                audioCheck ()
+                action.src = `img/action after.png`
+                sound8.play ()
+            }
+            action.onpointerup = () => action.src = `img/action.png`
+    
+         // interaction for adventure
+         const adventure = document.getElementById ("adventure")
+            adventure.onpointerdown = () => {
+                audioCheck ()
+                adventure.src = `img/adventure after.png`
+                sound9.play ()
+            }
+            adventure.onpointerup = () => adventure.src = `img/adventure.png`
+    
+            function audioCheck () {
+                if (buzz.audioCtx.state != 'running') {
+                    buzz.audioCtx.resume ()
+                    console.log (`audio has been resumed!`)
+                }
+                console.log (`audio has been checked!`)
+            }
+        </script>
+
+    </body>
+
+</html>
